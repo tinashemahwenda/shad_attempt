@@ -43,16 +43,38 @@ class HomePage extends StatelessWidget {
               description:
                   Text('You have entered the wrong login details. Try again'),
             ),
+            SizedBox(height: 20),
             Text(
               'Avatar',
               style: ShadTheme.of(context).textTheme.h4,
             ),
             ShadAvatar(
-              '..',
+              'assets/emoface.png',
               placeholder: Text(
                 'TM',
                 style: TextStyle(color: Colors.amber),
               ),
+              backgroundColor: Colors.grey[400],
+              size: Size.fromRadius(30),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Badges',
+              style: ShadTheme.of(context).textTheme.h4,
+            ),
+            SizedBox(height: 10),
+            Row(
+              spacing: 10,
+              children: [
+                ShadBadge(child: Text('Default')),
+                ShadBadge.secondary(child: Text('Calm')),
+                ShadBadge.outline(child: Text('Outline')),
+                ShadBadge.destructive(child: Text('Danger')),
+                ShadBadge(
+                  child: Text('Custom'),
+                  backgroundColor: Colors.green,
+                ),
+              ],
             )
           ],
         ),
