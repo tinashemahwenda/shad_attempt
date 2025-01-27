@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool value = false;
+  bool switchValue = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,6 +127,17 @@ class _HomePageState extends State<HomePage> {
                 label: Text('Are you sure you want to continue'),
                 sublabel:
                     Text('Accepting means you have agreed witht he terms'),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Switches',
+                style: ShadTheme.of(context).textTheme.h4,
+              ),
+              SizedBox(height: 10),
+              ShadSwitch(
+                value: switchValue,
+                onChanged: (v) => setState(() => switchValue = v),
+                checkedTrackColor: Colors.green,
               )
             ],
           ),
