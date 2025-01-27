@@ -42,6 +42,17 @@ class HomePage extends StatelessWidget {
               title: Text('Error'),
               description:
                   Text('You have entered the wrong login details. Try again'),
+            ),
+            Text(
+              'Avatar',
+              style: ShadTheme.of(context).textTheme.h4,
+            ),
+            ShadAvatar(
+              '..',
+              placeholder: Text(
+                'TM',
+                style: TextStyle(color: Colors.amber),
+              ),
             )
           ],
         ),
